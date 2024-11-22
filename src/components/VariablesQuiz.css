@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Container for the whole quiz */
+.quiz-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+/* Timer and Score Display */
+.timer, .score-display {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Question Section */
+.question-container {
+    margin-bottom: 20px;
+}
+
+.question-container h3 {
+    font-size: 20px;
+    color: #4A90E2;
+}
+
+.question-container div {
+    margin-bottom: 10px;
+}
+
+/* Options Style */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+/* Navigation Buttons */
+button {
+    background-color: #4A90E2;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button[type="submit"] {
+    width: 100%;
+}
+
+/* Message after Quiz Submission */
+.appreciation-message {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.message {
+    font-size: 20px;
+    color: #28a745;
+    margin-top: 10px;
+}
+
+.appreciation-message h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Retake Button and Navigation */
+button.retakes {
+    background-color: #FF6F61;
+}
+
+button.retakes:hover {
+    background-color: #d15e52;
+}
+
+button.back-home {
+    background-color: #FFB800;
+}
+
+button.back-home:hover {
+    background-color: #e19a00;
+}
+
+.appreciation-message,
+.timer,
+.score-display {
+    opacity: 6;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.quiz-container {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
